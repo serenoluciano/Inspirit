@@ -99,6 +99,7 @@ video {
 }
 
 .services {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Alinea los elementos en la parte superior */
@@ -136,7 +137,8 @@ video {
     font-size: 1em;
     margin-top: 5px;
     color: #666;
-    margin-bottom: 0; /* Elimina margen inferior extra */
+    margin-bottom: 0;
+    text-align: center;/* Elimina margen inferior extra */
 }
 
 
@@ -177,7 +179,7 @@ footer {
     height: 30px; /* Tamaño del icono */
     width: auto;
     margin-right: 10px;
-    filter: invert(1);
+    
 }
 
 .footer-social {
@@ -192,10 +194,83 @@ footer {
 .footer-social img {
     height: 30px;
     width: 30px;
-    filter: invert(1); /* Hace que los iconos sean blancos */
+    /* Hace que los iconos sean blancos */
     transition: transform 0.3s;
 }
 
 .footer-social img:hover {
     transform: scale(1.1); /* Efecto de hover en los iconos de redes sociales */
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px;  /* Distancia desde el borde derecho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra delicada */
+    border-radius: 50%;
+}
+
+.whatsapp-icon {
+    width: 60px;  /* Tamaño del icono de WhatsApp */
+    height: 60px; /* Tamaño del icono de WhatsApp */
+    border-radius: 50%;
+    object-fit: contain; /* Mantiene la proporción del icono */
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px) scale(1.1); /* Mueve y agranda ligeramente el botón */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+
+
+.quien-soy {
+    font-family: Arial, sans-serif;
+    line-height: 1.9; /* Aumento el interlineado para más espacio entre líneas */
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.quien-soy h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineamos el contenido al inicio del eje vertical */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.imagen img {
+    width: 400px; /* Ajusta el tamaño de la imagen */
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.texto {
+    text-align: justify;
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px; /* Controla el ancho del texto */
+    height: 500px; /* Establezco la misma altura de la imagen */
+    overflow-y: auto; /* Permite que el texto se desplace si es más largo que el contenedor */
+}
+
+.texto p {
+    margin-bottom: 10px;
+}
+
+.bienvenida {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center; /* Centra el texto de bienvenida */
+    margin-bottom: 20px;
 }
