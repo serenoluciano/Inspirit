@@ -1,8 +1,10 @@
 * {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'open sans';
     box-sizing: border-box;
 }
+
+
 
 header {
     background-color: #97E4DF; /* Fondo igual al del footer */
@@ -31,6 +33,7 @@ header li {
 }
 
 header a {
+    font-family: 'poppins';
     text-decoration: none;
     color: white; /* Enlaces en blanco */
     font-size: 18px;
@@ -223,11 +226,34 @@ footer {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
 }
 
+.playas {
+    line-height: 2.5; 
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
 
+.playas h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;   
+}
+
+.viajesculturales {
+    line-height: 1.4; 
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.viajesculturales h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
 
 .quien-soy {
-    font-family: Arial, sans-serif;
-    line-height: 1.9; /* Aumento el interlineado para más espacio entre líneas */
+    line-height: 1.9; 
     text-align: center;
     margin: 50px auto;
     padding: 20px;
@@ -242,14 +268,14 @@ footer {
 .contenido {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alineamos el contenido al inicio del eje vertical */
+    align-items: flex-start;
     gap: 30px;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .imagen img {
-    width: 400px; /* Ajusta el tamaño de la imagen */
+    width: 400px; 
     height: 500px;
     object-fit: cover;
     border-radius: 10px;
@@ -259,9 +285,9 @@ footer {
     text-align: justify;
     font-size: 1rem;
     color: #444;
-    max-width: 600px; /* Controla el ancho del texto */
-    height: 500px; /* Establezco la misma altura de la imagen */
-    overflow-y: auto; /* Permite que el texto se desplace si es más largo que el contenedor */
+    max-width: 600px; 
+    height: 600px; 
+    overflow-y: auto; 
 }
 
 .texto p {
@@ -271,6 +297,33 @@ footer {
 .bienvenida {
     font-weight: bold;
     font-size: 1.2rem;
-    text-align: center; /* Centra el texto de bienvenida */
+    text-align: center;
     margin-bottom: 20px;
+}
+
+.texto-asesorias {
+    text-align: justify;
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px; 
+    height: 600px; 
+    overflow-y: auto; 
+}
+
+.texto-asesorias p {
+    margin-bottom: 10px;
+}
+
+.texto-playas {
+    text-align: justify;
+    font-size: 1rem; 
+    color: #444;
+    max-width: 600px; 
+    height: 600px; 
+    overflow-y: auto; 
+}
+
+
+.texto-playas p {
+    margin-bottom: 10px;
 }
