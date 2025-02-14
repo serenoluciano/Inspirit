@@ -260,6 +260,10 @@ footer {
     color: #444;
 }
 
+.quien-soy-index p {
+    color: white;
+}
+
 .quien-soy {
     line-height: 1.9; 
     text-align: center;
@@ -436,3 +440,132 @@ footer {
   .next {
     margin-right: 10px;
   }
+
+  .oportunidades {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #97E4DF;
+    margin-bottom: 20px;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-around; /* Las imágenes se distribuyen uniformemente */
+    gap: 10px;
+}
+
+.imagenes img {
+    width: 400px;  /* Reduje el tamaño de las imágenes */
+    height: 550px; /* Mantengo la proporción de 1080x1920 */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagenes img:hover {
+    transform: translateY(-10px);
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #97E4DF;
+    margin-bottom: 40px; /* Espacio debajo del título */
+    font-weight: 400; /* Peso normal */
+}
+
+.notas {
+    width: 70%; /* El contenedor ahora tiene un ancho más pequeño, ocupa solo el 70% del ancho */
+    max-width: 900px; /* Máximo ancho para evitar que crezca demasiado */
+    margin: 0 auto; /* Centrado */
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notas img {
+    width: 100%;  /* Imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.notas h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.notas p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contact-form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px; 
+    margin: 0 auto;/* Ajusta el tamaño del formulario */
+    margin-bottom: 30px; /* Margen por debajo del formulario */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+    width: 100%; /* Hace que el textarea ocupe todo el ancho disponible */
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; /* Hace que los inputs ocupen el 100% del ancho disponible */
+}
+
+.contact-form button[type="submit"] {
+    background-color: #97E4DF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+    transform: scale(1.0);
+    transition: transform 0.3s ease-in-out;
+}
