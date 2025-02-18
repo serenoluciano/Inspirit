@@ -988,7 +988,7 @@ textarea {
     .carousel-container {
         height: 250px; /* Ajustar aún más la altura del contenedor */
         padding: 0 10px; /* Reducir padding */
-        width: 60%;
+        width: 100%;
     }
 
     .carousel-item {
