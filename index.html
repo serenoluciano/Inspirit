@@ -25,6 +25,11 @@
         <div class="logo">
             <a href="#"><img src="./assets/logo-blanco.png" alt="Inspirit"></a>
         </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -44,9 +49,15 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <div class="video-container">
-            <video autoplay muted loop><source src="./assets/video.mp4" type="video/mp4"></video>
+            <video autoplay muted loop class="desktop-video">
+                <source src="./assets/video.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop class="mobile-video">
+                <source src="./assets/video-mobile.mp4" type="video/mp4">
+            </video>
         </div>
         <section class="services">
             <div class="service">
@@ -71,7 +82,7 @@
             </div>
         </section>
         <section class="quien-soy-index">
-            
+
             <div class="contenido">
                 <div class="imagen">
                     <img src="./assets/quiensoy.jpg" alt="Gabriela Molina">
@@ -93,9 +104,8 @@
                 <div class="review">
                   <div class="client-info">
                     <img src="./assets/cliente1.jpg" alt="Cliente 1" class="client-img">
-                    <p class="review-text"><i>"Recorrimos, Exploramos y Descubrimos Turquía y Egipto, de la mano de Inspirit. Los hoteles fueron hermosos al igual que en viajes anteriores. Nos sentimos siempre muy cuidados y acompañados.
-La tranquilidad de confiar en la experiencia de Gabi, ella va armar un paquete a tu medida. Un viaje soñado. Una experiencia inolvidable."</i></p>
-                    <p class="client-name">Leticia Chodelka</p>
+                    <p class="review-text"><i>Recorrimos, exploramos y descubrimos Turquía y Egipto, de la mano de Inspirit. Los hoteles fueron hermosos al igual que en viajes anteriores. Nos sentimos siempre muy cuidados y acompañados.
+La tranquilidad de confiar en la experiencia de Gabi, ella va armar un paquete a tu medida. Un viaje soñado. Una experiencia inolvidable.</i> <br><b>Leticia Chodelka</b></p>
                   </div>
                 </div>
               </div>
@@ -104,8 +114,7 @@ La tranquilidad de confiar en la experiencia de Gabi, ella va armar un paquete a
                 <div class="review">
                   <div class="client-info">
                     <img src="./assets/cliente2.jpg" alt="Cliente 2" class="client-img">
-                    <p class="review-text"><i>"Conozco a Gabi desde hace años y siempre está dispuesta a escuchar tus ideas y necesidades para crear el viaje perfecto. Su profesionalismo y atención al detalle hacen que la planificación sea sencilla y libre de estrés. Recomiendo a Gabi al 100% para hacer realidad el viaje de tus sueños"</i></p>
-                    <p class="client-name">Marisa Pelayo</p>
+                    <p class="review-text"><i>Conozco a Gabi desde hace años y siempre está dispuesta a escuchar tus ideas y necesidades para crear el viaje perfecto. Su profesionalismo y atención al detalle hacen que la planificación sea sencilla y libre de estrés. Recomiendo a Gabi al 100% para hacer realidad el viaje de tus sueños.</i><br><b>Marisa Pelayo</b></p>
                   </div>
                 </div>
               </div>
@@ -114,8 +123,7 @@ La tranquilidad de confiar en la experiencia de Gabi, ella va armar un paquete a
                 <div class="review">
                   <div class="client-info">
                     <img src="./assets/cliente3.jpg" alt="Cliente 3" class="client-img">
-                    <p class="review-text"><i>"Viaje a Europa con la asesoría de Gabi! Me ayudó a organizar un viaje a medida y con el presupuesto que tenía planificado. Todo salio perfecto! Recomiendo 100% sus servicios y su calidad humana."</i></p>
-                    <p class="client-name">Ailin Alietti</p>
+                    <p class="review-text"><i>Viaje a Europa con la asesoría de Gabi! Me ayudó a organizar un viaje a medida y con el presupuesto que tenía planificado. Todo salio perfecto! Recomiendo 100% sus servicios y su calidad humana.</i><br><b>Ailin Alietti</b></p>
                   </div>
                 </div>
               </div>
@@ -124,13 +132,18 @@ La tranquilidad de confiar en la experiencia de Gabi, ella va armar un paquete a
                 <div class="review">
                   <div class="client-info">
                     <img src="./assets/cliente4.jpg" alt="Cliente 4" class="client-img">
-                    <p class="review-text"><i>"Su impecable organización y atención al detalle hicieron que todo saliera a la perfección, permitiéndome disfrutar al máximo de cada momento de mi estadía para ver a mi banda favorita. ¡Gracias Inspirit por hacer de mi viaje una experiencia inolvidable!"</i></p>
-                    <p class="client-name">Silvina Gonzalvez</p>
+                    <p class="review-text"><i>Su impecable organización y atención al detalle hicieron que todo saliera a la perfección, permitiéndome disfrutar al máximo de cada momento de mi estadía para ver a mi banda favorita. ¡Gracias Inspirit por hacer de mi viaje una experiencia inolvidable!</i><br><b>Silvina Gonzalvez</b></p>
                   </div>
                 </div>
               </div>
-              <!-- Más elementos aquí... -->
-        
+              <div class="carousel-item">
+                <div class="review">
+                  <div class="client-info">
+                    <img src="./assets/cliente5.jpg" alt="Cliente 5" class="client-img">
+                    <p class="review-text"><i>Gabi me organizó decenas de viajes. Desde destinos de playa como Los Roques hasta otros más exóticos como Japón. Su capacidad de resolución, de planificación y de cuidado para conmigo como cliente, fue inmejorable. Recomiendo su asistencia por su responsabilidad y compromiso para con el viajero. Siempre dispuesta a que los viajes sean como uno los soñó.</i><br><b>Gustavo Rodriguez</b></p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="carousel-nav">
               <span class="prev" onclick="moveSlide(-1)">&#10094;</span>

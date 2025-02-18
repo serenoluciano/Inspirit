@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 header {
     background-color: #97E4DF; /* Fondo igual al del footer */
     height: 81px;
@@ -56,7 +54,6 @@ header a:hover {
     background-color: transparent; /* Elimina cualquier fondo en hover */
 }
 
-
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -85,11 +82,41 @@ header a:hover {
     display: block;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+
+
+
+
 .video-container {
     position: relative;
     height: 90vh;
     overflow: hidden;
     width: 100%;
+}
+
+.desktop-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Ocultar el video móvil por defecto */
 }
 
 video {
@@ -143,114 +170,6 @@ video {
     text-align: center;/* Elimina margen inferior extra */
 }
 
-
-/* Nuevo Footer */
-footer {
-    background-color: #97E4DF; /* Fondo igual al del header */
-    padding: 20px 0;
-    color: white;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-logo img {
-    height: 100px; /* Tamaño más grande para el logo */
-    width: auto;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido */
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.contact-item img {
-    height: 30px; /* Tamaño del icono */
-    width: auto;
-    margin-right: 10px;
-    
-}
-
-.footer-social {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-social a {
-    margin: 0 10px;
-}
-
-.footer-social img {
-    height: 30px;
-    width: 30px;
-    /* Hace que los iconos sean blancos */
-    transition: transform 0.3s;
-}
-
-.footer-social img:hover {
-    transform: scale(1.1); /* Efecto de hover en los iconos de redes sociales */
-}
-
-.whatsapp-btn {
-    position: fixed;
-    bottom: 20px; /* Distancia desde el fondo */
-    right: 20px;  /* Distancia desde el borde derecho */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra delicada */
-    border-radius: 50%;
-}
-
-.whatsapp-icon {
-    width: 60px;  /* Tamaño del icono de WhatsApp */
-    height: 60px; /* Tamaño del icono de WhatsApp */
-    border-radius: 50%;
-    object-fit: contain; /* Mantiene la proporción del icono */
-}
-
-.whatsapp-btn:hover {
-    transform: translateY(-5px) scale(1.1); /* Mueve y agranda ligeramente el botón */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
-}
-
-.playas {
-    line-height: 2.5; 
-    text-align: center;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.playas h1 {
-    font-size: 2rem;
-    color: #97E4DF;
-    margin-bottom: 20px;   
-}
-
-.viajesculturales {
-    line-height: 1.4; 
-    text-align: center;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.viajesculturales h1 {
-    font-size: 2rem;
-    color: #97E4DF;
-    margin-bottom: 20px;
-}
-
 .quien-soy-index {
     line-height: 1.9; 
     text-align: center;
@@ -264,6 +183,7 @@ footer {
     color: white;
 }
 
+
 .quien-soy {
     line-height: 1.9; 
     text-align: center;
@@ -272,13 +192,26 @@ footer {
     color: #444;
 }
 
-
 .quien-soy h1 {
     font-size: 2rem;
     color: #97E4DF;
     margin-bottom: 20px;
 }
 
+
+
+.texto-asesorias {
+    text-align: justify;
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px; 
+    height: 600px; 
+    overflow-y: auto; 
+}
+
+.texto-asesorias p {
+    margin-bottom: 10px;
+}
 .contenido {
     display: flex;
     justify-content: center;
@@ -313,6 +246,121 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Nuevo Footer */
+footer {
+    background-color: #97E4DF; /* Fondo igual al del header */
+    padding: 20px 0;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 100px; /* Tamaño más grande para el logo */
+    width: auto;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido */
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contact-item img {
+    height: 30px; /* Tamaño del icono */
+    width: auto;
+    margin-right: 10px;
+    
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Efecto de hover en los iconos de redes sociales */
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px;  /* Distancia desde el borde derecho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra delicada */
+    border-radius: 50%;
+}
+
+.whatsapp-icon {
+    width: 60px;  /* Tamaño del icono de WhatsApp */
+    height: 60px; /* Tamaño del icono de WhatsApp */
+    border-radius: 50%;
+    object-fit: contain; /* Mantiene la proporción del icono */
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px) scale(1.1); /* Mueve y agranda ligeramente el botón */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+.playas {
+    line-height: 2.5; 
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.playas h1 {
+    font-size: 2rem;
+    color: #97E4DF;
+    margin-bottom: 20px;   
+}
+
+.viajesculturales {
+    line-height: 1.4; 
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.viajesculturales h1 {
+    font-size: 2rem;
+    color: #97E4DF;
+    margin-bottom: 20px;
+}
+
+.quien-soy {
+    line-height: 1.9; 
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+    color: #444;
 }
 
 .texto-asesorias {
@@ -376,13 +424,22 @@ footer {
     color: #fff;
     border-radius: 10px;
     text-align: center;
-    width: 60%;
+    width: 65%;
   }
   
   .client-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+  }
+
+  .background {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Opcional, redondea los bordes */
+    width: fit-content; /* Ajusta el ancho al contenido del texto */
   }
   
   .client-img {
@@ -394,17 +451,27 @@ footer {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 3);
   }
   
+
   .review-text {
     font-style: italic;
     font-size: 1.2em;
     margin-bottom: 10px;
     text-shadow: 0 6px 18px rgba(0, 0, 0, 3);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 30px; /* Opcional, redondea los bordes */
+    width: fit-content; /* Ajusta el ancho al contenido del texto */
+
+ 
   }
   
   .client-name {
     font-weight: bold;
     font-size: 1.1em;
     text-shadow: 0 6px 18px rgba(0, 0, 0, 3);
+    
+    
   }
   
   /* Controles de navegación */
@@ -440,13 +507,12 @@ footer {
   .next {
     margin-right: 10px;
   }
-
   .oportunidades {
     text-align: center;
     margin: 20px 20px;
 }
 
-h1 {
+.oportunidades h1 {
     font-size: 2rem;
     color: #97E4DF;
     margin-bottom: 20px;
@@ -454,13 +520,23 @@ h1 {
 
 .imagenes {
     display: flex;
-    justify-content: space-around; /* Las imágenes se distribuyen uniformemente */
-    gap: 10px;
+    flex-wrap: wrap; /* Permite que las imágenes se organicen en varias filas */
+    justify-content: space-between;
+    gap: 20px; /* Separa las imágenes entre sí */
+    margin: 0 auto;
+    max-width: 1200px; /* Limitar el ancho máximo del contenedor */
+}
+
+.imagen-container {
+    display: flex;
+    flex-direction: column; /* Organiza las imágenes verticalmente */
+    gap: 20px; /* Espacio entre las imágenes en una columna */
+    width: 48%; /* El 48% permite un margen entre las dos columnas */
 }
 
 .imagenes img {
-    width: 400px;  /* Reduje el tamaño de las imágenes */
-    height: 550px; /* Mantengo la proporción de 1080x1920 */
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -473,19 +549,17 @@ h1 {
 
 
 
-h1 {
-    text-align: center;
-    font-size: 2.5rem; /* Tamaño del título */
+.notas h1 {
+    font-size: 2rem;
     color: #97E4DF;
-    margin-bottom: 40px; /* Espacio debajo del título */
-    font-weight: 400; /* Peso normal */
+    margin-bottom: 20px;
 }
 
 .notas {
     width: 70%; /* El contenedor ahora tiene un ancho más pequeño, ocupa solo el 70% del ancho */
     max-width: 900px; /* Máximo ancho para evitar que crezca demasiado */
     margin: 0 auto; /* Centrado */
-    padding: 20px;
+    padding: 2rem;
     border-bottom: 2px solid #ddd;
     display: flex;
     flex-direction: column;
@@ -523,13 +597,28 @@ h1 {
     text-align: justify;
 }
 
+.main { 
+    background-image: url(./assets/contact.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 80px;
+    padding-top: 2rem;
+}
+
+.main h1{
+    font-size: 2rem;
+    color: #97E4DF;
+    margin: 0px auto;
+    text-align: center;
+
+}
 .contact-form {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
     width: 500px; 
     margin: 0 auto;/* Ajusta el tamaño del formulario */
-    margin-bottom: 30px; /* Margen por debajo del formulario */
+     /* Margen por debajo del formulario */
 }
 
 .contact-form form {
@@ -543,7 +632,7 @@ h1 {
 
 textarea {
     resize: none;
-    height: 80px;
+    height: 120px;
     width: 100%; /* Hace que el textarea ocupe todo el ancho disponible */
 }
 
@@ -569,3 +658,457 @@ textarea {
     transform: scale(1.0);
     transition: transform 0.3s ease-in-out;
 }
+
+
+
+/* Estilo para el menú hamburguesa en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Ocultar los enlaces del menú por defecto */
+    header ul {
+        display: none;
+        flex-direction: column;
+        background-color: #97E4DF;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Mostrar icono hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mostrar el menú cuando se activa */
+    header ul.show {
+        display: flex;
+    }
+
+    /* Estilo para los enlaces en el menú hamburguesa */
+    header a {
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .desktop-video {
+        display: none; /* Esconder el video de escritorio en pantallas pequeñas */
+    }
+
+    .mobile-video {
+        display: block; /* Mostrar el video móvil en pantallas pequeñas */
+    }
+
+    /* Ajuste de la sección de servicios */
+    .services {
+        display: flex;
+        flex-direction: column; /* Cambiar la dirección de la fila a columna */
+        align-items: center; /* Alinear los elementos al centro */
+        gap: 20px; /* Añadir espacio entre las tarjetas */
+        margin: 10px; /* Reducir margen para que todo esté más centrado */
+        padding: 10px;
+    }
+
+    .service {
+        width: 80%; /* Cambiar el tamaño de cada tarjeta para que ocupe el 80% del contenedor */
+        max-width: 500px; /* Establecer un límite máximo de ancho */
+        display: flex;
+        flex-direction: column; /* Asegurarse de que los elementos dentro estén en columna */
+        justify-content: flex-start; /* Asegurar que los elementos se alineen arriba */
+        text-align: center;
+    }
+
+    .service img {
+        width: 100%; /* Asegurar que las imágenes ocupen el 100% del contenedor */
+        height: auto; /* Mantener la proporción original de las imágenes */
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .service h4 {
+        font-size: 1.1em; /* Reducir el tamaño del texto para dispositivos pequeños */
+        margin-top: 10px;
+        color: #333;
+    }
+    .whatsapp-btn {
+        bottom: 15px; /* Ajustar la distancia desde la parte inferior */
+        right: 25px;  /* Ajustar la distancia desde la parte derecha */
+        width: 50px;  /* Hacer el botón más pequeño */
+        height: 50px; /* Hacer el botón más pequeño */
+    }
+
+    .whatsapp-icon {
+        width: 100%; /* Hacer el icono más pequeño dentro del botón */
+        height: 100%; /* Mantener el tamaño adecuado */
+    }
+
+    .contenido {
+        flex-direction: column; /* Cambiar la dirección del flex para apilar los elementos */
+        align-items: center; /* Centrar los elementos en pantallas pequeñas */
+        gap: 20px; /* Reducir el espacio entre la imagen y el texto */
+    }
+
+    .imagen img {
+        width: 80%; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    .texto-asesorias {
+        font-size: 0.95rem; /* Ajustar el tamaño del texto */
+        max-width: 100%; /* Hacer el texto más flexible */
+        height: auto; /* Dejar que el texto se ajuste según el contenido */
+        padding: 10px; /* Agregar un poco de espaciado */ 
+    }
+    .texto {
+        max-width: 100%; /* El texto ocupará el 100% del ancho disponible */
+        font-size: 1rem; /* Ajustar el tamaño del texto si es necesario */
+        height: auto; /* Quitar la altura fija */
+    }
+ .carousel-item {
+        padding: 10px; /* Reducimos el padding del carrusel */
+    }
+
+    .review {
+        width: 90%;  /* Ajustamos el ancho de la reseña */
+        padding: 15px; /* Reducimos el padding */
+    }
+
+    .client-img {
+        width: 120px; /* Ajustamos el tamaño de la imagen */
+        height: 120px; /* Ajustamos el tamaño de la imagen */
+    }
+
+    .review-text {
+        max-width: 100%;
+        font-size: 1em; /* Reducimos el tamaño del texto */
+    }
+
+    .client-name {
+        font-size: 1em; /* Ajustamos el tamaño del nombre */
+    }
+
+    .carousel-nav {
+        display: none; /* Escondemos los controles de navegación en pantallas pequeñas */
+    }   
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Centra todo el contenido */
+        padding: 0 15px;
+    }
+
+    .footer-logo img {
+        height: 80px; /* Reducir el tamaño del logo */
+    }
+
+    .footer-contact {
+        margin-top: 20px; /* Añadir espacio superior */
+    }
+
+    .footer-social {
+        justify-content: center; /* Centra los iconos de redes sociales */
+        margin-top: 20px; /* Añadir espacio superior */
+    }
+
+    .footer-social a {
+        margin: 0 15px; /* Ajustar el espacio entre los iconos */
+    }
+
+    .footer-social img {
+        height: 25px; /* Reducir el tamaño de los iconos de redes sociales */
+        width: 25px;
+    }
+    .quien-soy h1 {
+        font-size: 1.8rem;
+    }
+
+    .imagen img {
+        width: 80%;  /* Reducir el tamaño de la imagen */
+        height: auto; /* Mantener la proporción */
+    }
+
+    .texto-asesorias {
+        font-size: 0.95rem; /* Ajustar el tamaño del texto */
+        max-width: 100%; /* Hacer el texto más flexible */
+        height: auto; /* Dejar que el texto se ajuste según el contenido */
+        padding: 10px; /* Agregar un poco de espaciado */
+    }
+    .notas {
+        width: 90%; /* Aumentar el ancho del contenedor a un 90% */
+        padding: 1.5rem; /* Reducir el padding para ahorrar espacio */
+    }
+
+    .notas h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del título */
+        text-align: center; /* Centrar el título */
+    }
+
+    .notas img {
+        width: 100%;  /* Imagen mantiene su tamaño completo */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .notas p {
+        font-size: 0.95rem; /* Reducir el tamaño de la fuente */
+    }
+    .main h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del título */
+    }
+
+    .contact-form {
+        width: 90%; /* Hacer que el formulario ocupe el 90% del ancho disponible */
+        padding: 15px; /* Reducir el padding */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px; /* Reducir el padding de los campos */
+    }
+
+    .contact-form button[type="submit"] {
+        padding: 10px 15px; /* Ajustar el padding del botón */
+        font-size: 14px; /* Reducir el tamaño de la fuente del botón */
+    }
+
+    .imagen-container {
+        width: 48%; /* Se mantienen 2 imágenes por fila, pero con un poco más de espacio */
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+    /* Ocultar los enlaces del menú por defecto */
+    header ul {
+        display: none;
+        flex-direction: column;
+        background-color: #97E4DF;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Mostrar icono hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mostrar el menú cuando se activa */
+    header ul.show {
+        display: flex;
+    }
+
+    /* Estilo para los enlaces en el menú hamburguesa */
+    header a {
+        padding: 12px 18px; /* Reducir el tamaño del padding */
+        text-align: center;
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+    }
+
+    .desktop-video {
+        display: none; /* Esconder el video de escritorio en pantallas pequeñas */
+    }
+
+    .mobile-video {
+        display: block; /* Mostrar el video móvil en pantallas pequeñas */
+    }
+
+    /* Ajuste de la sección de servicios */
+    .services {
+        display: flex;
+        flex-direction: column; /* Cambiar la dirección de la fila a columna */
+        align-items: center; /* Alinear los elementos al centro */
+        gap: 15px; /* Reducir el espacio entre las tarjetas */
+        margin: 8px; /* Reducir margen para que todo esté más centrado */
+        padding: 8px; /* Reducir padding */
+    }
+
+    .service {
+        width: 90%; /* Cambiar el tamaño de cada tarjeta para que ocupe el 90% del contenedor */
+        max-width: 400px; /* Establecer un límite máximo de ancho */
+        display: flex;
+        flex-direction: column; /* Asegurarse de que los elementos dentro estén en columna */
+        justify-content: flex-start; /* Asegurar que los elementos se alineen arriba */
+        text-align: center;
+    }
+
+    .service img {
+        width: 100%; /* Asegurar que las imágenes ocupen el 100% del contenedor */
+        height: auto; /* Mantener la proporción original de las imágenes */
+        border-radius: 8px; /* Hacer los bordes más suaves */
+        transition: transform 0.3s ease;
+    }
+
+    .service h4 {
+        font-size: 1em; /* Reducir el tamaño del texto para dispositivos pequeños */
+        margin-top: 8px;
+        color: #333;
+    }
+
+    .whatsapp-btn {
+        bottom: 10px; /* Ajustar la distancia desde la parte inferior */
+        right: 10px;  /* Ajustar la distancia desde la parte derecha */
+        width: 45px;  /* Hacer el botón más pequeño */
+        height: 45px; /* Hacer el botón más pequeño */
+    }
+
+    .whatsapp-icon {
+        width: 100%; /* Hacer el icono más pequeño dentro del botón */
+        height: 100%; /* Mantener el tamaño adecuado */
+    }
+
+    .quien-soy h1 {
+        font-size: 1.6rem; /* Reducir aún más el tamaño del título */
+    }
+
+    .contenido {
+        flex-direction: column; /* Cambiar la dirección del flex para apilar los elementos */
+        align-items: center; /* Centrar los elementos en pantallas pequeñas */
+        gap: 15px; /* Reducir el espacio entre la imagen y el texto */
+    }
+
+    .imagen img {
+        width: 75%; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+
+    .texto {
+        max-width: 100%; /* El texto ocupará el 100% del ancho disponible */
+        font-size: 0.9rem; /* Ajustar el tamaño del texto si es necesario */
+        height: auto; /* Quitar la altura fija */
+    }
+
+    .texto-asesorias {
+        font-size: 0.9rem; /* Reducir tamaño de texto */
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .carousel-container {
+        height: 250px; /* Ajustar aún más la altura del contenedor */
+        padding: 0 10px; /* Reducir padding */
+        width: 60%;
+    }
+
+    .carousel-item {
+        padding: 5px; /* Reducir padding de los items */
+    }
+
+    .carousel-item p {
+        font-size: 0.85rem; /* Reducir aún más el tamaño del texto */
+        margin: 0 5px; /* Mantener márgenes pequeños */
+    }   
+
+    .review {
+        width: 90%; /* Reducimos el tamaño del contenedor de la reseña */
+        padding: 12px; /* Reducimos el padding dentro de la reseña */
+    }
+
+    .client-img {
+        width: 80px; /* Reducimos el tamaño de las imágenes de los clientes */
+        height: 80px; /* Ajustamos la altura de las imágenes */
+    }
+    .client-info {
+    max-width: 100%;
+}
+
+    .review-text {
+        font-size: 0.9em; /* Reducimos el tamaño del texto de la reseña */
+    }
+
+    .client-name {
+        font-size: 0.9em; /* Ajustamos el tamaño del nombre del cliente */
+    }
+
+    .carousel-nav {
+        display: none; /* Escondemos los controles de navegación en pantallas pequeñas */
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-logo img {
+        height: 70px; /* Reducir aún más el tamaño del logo */
+    }
+
+    .footer-contact {
+        margin-top: 15px; /* Reducir espacio superior */
+    }
+
+    .contact-item img {
+        height: 25px; /* Reducir el tamaño de los iconos de contacto */
+        width: auto;
+        margin-right: 8px; /* Ajustar el espacio entre el icono y el texto */
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .footer-social a {
+        margin: 0 10px; /* Ajustar el espacio entre los iconos */
+    }
+
+    .footer-social img {
+        height: 20px; /* Reducir aún más el tamaño de los iconos de redes sociales */
+        width: 20px;
+    }
+    
+    .notas {
+        width: 100%; /* El contenedor ocupa todo el ancho disponible */
+        padding: 1rem; /* Reducir aún más el padding */
+    }
+
+    .notas h1 {
+        font-size: 1.6rem; /* Reducir aún más el tamaño del título */
+    }
+
+    .notas img {
+        width: 100%; /* Asegurarse de que la imagen ocupe todo el ancho disponible */
+        height: auto;
+    }
+
+    .notas p {
+        font-size: 0.9rem; /* Reducir aún más el tamaño del texto */
+    }
+    .main h1 {
+        font-size: 1.6rem; /* Reducir aún más el tamaño del título */
+    }
+
+    .contact-form {
+        width: 100%; /* El formulario ocupa todo el ancho disponible */
+        padding: 10px; /* Reducir aún más el padding */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 6px; /* Reducir el padding de los campos */
+    }
+
+    .contact-form button[type="submit"] {
+        padding: 8px 12px; /* Reducir el tamaño del botón */
+        font-size: 13px; /* Reducir aún más el tamaño del texto en el botón */
+    }
+    
+    .imagenes {
+        gap: 10px; /* Reducir el espacio entre las imágenes */
+        justify-content: center; /* Asegura que las imágenes se centren en pantallas pequeñas */
+    }
+
+    .imagen-container {
+        width: 80%; /* 1 imagen por fila en pantallas más pequeñas */
+        margin: 10px 0; /* Espacio entre los contenedores de imágenes */
+    }
+
+    .oportunidades h1 {
+        font-size: 1.5rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+
+    .imagenes img {
+        height: 100%; /* Reducir la altura de las imágenes en pantallas más pequeñas */
+    }
+}
+
