@@ -94,11 +94,6 @@ header a:hover {
     height: 3px;
     background-color: white;
 }
-
-
-
-
-
 .video-container {
     position: relative;
     height: 90vh;
@@ -275,7 +270,6 @@ footer {
     align-items: center; /* Centra el contenido */
 }
 
-
 .contact-item {
     display: flex;
     align-items: center;
@@ -283,11 +277,55 @@ footer {
 }
 
 .contact-item img {
-    height: 30px; /* Tamaño del icono */
+    height: 40px; /* Tamaño del icono */
     width: auto;
     margin-right: 10px;
-    
 }
+
+.btn {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    margin-top: 10px; /* Asegura que el botón esté separado del correo */
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn::after {
+    background-color: #fff;
+}
+
 
 .footer-social {
     display: flex;
@@ -299,8 +337,8 @@ footer {
 }
 
 .footer-social img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     transition: transform 0.3s;
 }
 
@@ -457,7 +495,7 @@ footer {
     font-size: 1.2em;
     margin-bottom: 10px;
     text-shadow: 0 6px 18px rgba(0, 0, 0, 3);
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    background-color: rgba(0, 0, 0, 0.35); /* Fondo negro con 50% de opacidad */
     color: white; /* Color del texto */
     padding: 10px; /* Espaciado alrededor del texto */
     border-radius: 30px; /* Opcional, redondea los bordes */
@@ -518,33 +556,55 @@ footer {
     margin-bottom: 20px;
 }
 
-.imagenes {
+.carousel-oportunidad {
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se organicen en varias filas */
-    justify-content: space-between;
-    gap: 20px; /* Separa las imágenes entre sí */
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1500px; /* Aumentar el tamaño máximo del carrusel */
     margin: 0 auto;
-    max-width: 1200px; /* Limitar el ancho máximo del contenedor */
 }
 
-.imagen-container {
+.carousel-oportunidad-inner {
     display: flex;
-    flex-direction: column; /* Organiza las imágenes verticalmente */
-    gap: 20px; /* Espacio entre las imágenes en una columna */
-    width: 48%; /* El 48% permite un margen entre las dos columnas */
+    animation: slideEffect 55s ease-in-out infinite; /* Animación infinita con rebote */
+    gap: 20px; /* Gap entre las imágenes */
 }
 
-.imagenes img {
+.carousel-oportunidad:hover .carousel-oportunidad-inner {
+    animation-play-state: paused; /* Detener el carrusel al hacer hover */
+}
+
+.carousel-imagen {
+    flex: 1 0 22%; /* Ajuste para mostrar 4 imágenes al mismo tiempo */
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0; /* Evita que las imágenes se encojan */
+}
+
+.carousel-imagen img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    transform: scale(1.1); /* Hacer las imágenes más grandes */
 }
 
-.imagenes img:hover {
-    transform: translateY(-10px);
+/* Efecto hover sobre las imágenes */
+.carousel-imagen:hover img {
+    transform: scale(1.2); /* Al pasar el ratón, las imágenes se agrandan más */
+}
+
+/* Animación de deslizamiento con rebote */
+@keyframes slideEffect {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }
+    55% { transform: translateX(-90%); }  /* Rebote hacia la izquierda */
+    60% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }  /* Regreso hacia la posición inicial */
 }
 
 
@@ -610,6 +670,7 @@ footer {
     color: #97E4DF;
     margin: 0px auto;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 
 }
 .contact-form {
@@ -658,7 +719,6 @@ textarea {
     transform: scale(1.0);
     transition: transform 0.3s ease-in-out;
 }
-
 
 
 /* Estilo para el menú hamburguesa en pantallas pequeñas */
@@ -873,6 +933,21 @@ textarea {
         width: 48%; /* Se mantienen 2 imágenes por fila, pero con un poco más de espacio */
     }
 
+    .carousel-oportunidad {
+        max-width: 100%; /* Ajuste máximo al tamaño de la pantalla */
+    }
+
+    .carousel-oportunidad-inner {
+        gap: 15px; /* Reducir el gap entre imágenes */
+    }
+
+    .carousel-imagen {
+        flex: 1 0 30%; /* Mostrar 3 imágenes en pantallas medianas */
+    }
+
+    .carousel-imagen img {
+        transform: scale(1.05); /* Reducir un poco el tamaño de las imágenes */
+    }
 
 }
 
@@ -991,8 +1066,10 @@ textarea {
         width: 100%;
     }
 
+    
     .carousel-item {
         padding: 5px; /* Reducir padding de los items */
+        width: 80%;
     }
 
     .carousel-item p {
@@ -1109,6 +1186,21 @@ textarea {
 
     .imagenes img {
         height: 100%; /* Reducir la altura de las imágenes en pantallas más pequeñas */
+    }
+    .carousel-oportunidad {
+        max-width: 100%; /* Ajuste máximo al tamaño de la pantalla */
+    }
+
+    .carousel-oportunidad-inner {
+        gap: 10px; /* Reducir más el gap entre imágenes */
+    }
+
+    .carousel-imagen {
+        flex: 1 0 45%; /* Mostrar 2 imágenes en pantallas pequeñas */
+    }
+
+    .carousel-imagen img {
+        transform: scale(1); /* Hacer las imágenes más pequeñas */
     }
 }
 
