@@ -284,7 +284,7 @@ footer {
 
 .btn {
     font-size: 10px;
-    text-transform: uppercase;
+
     text-decoration: none;
     padding: 1em 2.5em;
     display: inline-block;
@@ -294,8 +294,8 @@ footer {
     border: none;
     font-family: inherit;
     font-weight: 500;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #BFBBEF;
     margin-top: 10px; /* Asegura que el botón esté separado del correo */
 }
 
@@ -323,7 +323,7 @@ footer {
 }
 
 .btn::after {
-    background-color: #fff;
+    background-color: #BFBBEF;
 }
 
 
@@ -526,7 +526,7 @@ footer {
 
     color: #fff;
     padding: 10px 15px;
-    font-size: 1em;
+    font-size: 50px;
     cursor: pointer;
     border: none;
     border-radius: 50%;
@@ -671,56 +671,82 @@ footer {
     margin: 0px auto;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-
-}
-.contact-form {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px; 
-    margin: 0 auto;/* Ajusta el tamaño del formulario */
-     /* Margen por debajo del formulario */
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
+  .main  { 
+            background-image: url(./assets/contact.jpg);
+            background-size: cover;
+            background-position: bottom;
+            padding-bottom: 80px;
+            padding-top: 2rem;
+        }
+        
+        .main h1{
+            font-size: 2rem;
+            color: #97E4DF;
+            margin: 0px auto;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
 
-.contact-form label {
-    margin-bottom: 10px;
-}
+        .contact-card  {
+            background: white;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
 
-textarea {
-    resize: none;
-    height: 120px;
-    width: 100%; /* Hace que el textarea ocupe todo el ancho disponible */
-}
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
 
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%; /* Hace que los inputs ocupen el 100% del ancho disponible */
-}
+        .contact-info h2 {
+            color: #BFBBEF;
+            margin-bottom: 5px;
+        }
 
-.contact-form button[type="submit"] {
-    background-color: #97E4DF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .position {
+            color: #97E4DF;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
 
-.contact-form button[type="submit"]:hover {
-    transform: scale(1.0);
-    transition: transform 0.3s ease-in-out;
-}
+        .contact-details p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #444;
+        }
 
+        .contact-details i  {
+            margin-right: 8px;
+            color: #97E4DF;
+        }
 
+        .cotizador {
+            background-image: url(./assets/contact.jpg);
+            background-size: cover;
+            background-position: bottom;
+            padding-bottom: 80px;
+            padding-top: 2rem;
+            height: 500px;
+        }
+
+        .cotizador h1 {
+            font-size: 2rem;
+            color: #97E4DF;
+            margin: 0px auto;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        
 /* Estilo para el menú hamburguesa en pantallas pequeñas */
 @media screen and (max-width: 768px) {
     /* Ocultar los enlaces del menú por defecto */
@@ -874,8 +900,8 @@ textarea {
     }
 
     .footer-social img {
-        height: 25px; /* Reducir el tamaño de los iconos de redes sociales */
-        width: 25px;
+        height: 30px; /* Reducir el tamaño de los iconos de redes sociales */
+        width: 30px;
     }
     .quien-soy h1 {
         font-size: 1.8rem;
